@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>Unity.SelfHostWebApiOwin</id>
+    <version>1.0.2</version>
+    <authors>damienbod</authors>
+    <owners>damienbod</owners>
+    <projectUrl>http://damienbod.wordpress.com</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Unity for self hosted WebApi</description>
+    <language>en-US</language>
+    <tags>.NET ASP.NET Web Api Enterprise Library Unity Web WebApi</tags>
+  </metadata>
+</package>
