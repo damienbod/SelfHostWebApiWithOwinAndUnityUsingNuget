@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
-    <version>1.0.5</version>
+    <version>1.0.6-beta</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com</projectUrl>
@@ -17,6 +17,11 @@
       <dependency id="Microsoft.AspNet.WebPages" version="2.0.20710.0"  />
       <dependency id="Newtonsoft.Json" version="4.5.11"  />
 	  <dependency id="Owin" version="1.0"  />
+	  <dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="5.0.0-rc1" />
+	  <dependency id="Microsoft.AspNet.WebApi.Core" version="5.0.0-rc1" />  
+	  <dependency id="Microsoft.AspNet.WebApi.Client" version="5.0.0-rc1" />
+	  <dependency id="Microsoft.Owin" version="2.0.0-rc1" />
+	  <dependency id="Microsoft.Owin.Host.HttpListener" version="2.0.0-rc1" />
     </dependencies>
   </metadata>
   </package>
