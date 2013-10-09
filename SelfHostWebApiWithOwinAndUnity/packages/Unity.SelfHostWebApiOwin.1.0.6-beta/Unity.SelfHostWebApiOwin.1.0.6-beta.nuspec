@@ -1,26 +1,19 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
-    <version>1.0.4</version>
+    <version>1.0.6-beta</version>
+    <title>Unity.SelfHostWebApiOwin</title>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Unity for self hosted WebApi</description>
     <releaseNotes>Code: https://github.com/damienbod/SelfHostWebApiWithOwinAndUnityUsingNuget
-website damienbod.wordpress.com
-
+Website: damienbod.wordpress.com 
 TODO
 - Doc HowTo
-- Tests Filter
-- missing dependencies
-"Microsoft.AspNet.WebApi.Client" version="5.0.0-rc1"
-"Microsoft.AspNet.WebApi.Core" version="5.0.0-rc1"
-"Microsoft.AspNet.WebApi.Owin" version="5.0.0-rc1"
-"Microsoft.AspNet.WebApi.OwinSelfHost" version="5.0.0-rc1"
-"Microsoft.Owin.Host.HttpListener" version="2.0.0-rc1"
-"Microsoft.Owin.Hosting" version="2.0.0-rc1"</releaseNotes>
+- Tests Filter</releaseNotes>
     <language>en-US</language>
     <tags>.NET ASP.NET Web Api Enterprise Library Unity WebApi</tags>
     <dependencies>
@@ -30,6 +23,11 @@ TODO
       <dependency id="Microsoft.AspNet.WebPages" version="2.0.20710.0" />
       <dependency id="Newtonsoft.Json" version="4.5.11" />
       <dependency id="Owin" version="1.0" />
+      <dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="5.0.0-rc1" />
+      <dependency id="Microsoft.AspNet.WebApi.Core" version="5.0.0-rc1" />
+      <dependency id="Microsoft.AspNet.WebApi.Client" version="5.0.0-rc1" />
+      <dependency id="Microsoft.Owin" version="2.0.0-rc1" />
+      <dependency id="Microsoft.Owin.Host.HttpListener" version="2.0.0-rc1" />
     </dependencies>
   </metadata>
 </package>

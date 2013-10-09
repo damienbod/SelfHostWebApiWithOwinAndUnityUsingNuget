@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Reflection;
 using Microsoft.Practices.Unity;
 using System.Linq;
-using SelfHostWebApiOwin.Business.Attributes;
 
 namespace Unity.SelfHostWebApiOwin
 {
@@ -42,21 +41,21 @@ namespace Unity.SelfHostWebApiOwin
         public static void RegisterTypes(IUnityContainer container)
         {
 		    // Add your register logic here...
-            var myAssemblies = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("SelfHostWebApiOwin")).ToArray();
+            // var myAssemblies = AppDomain.CurrentDomain.GetAssemblies().Where(a => a.FullName.StartsWith("your_assembly_Name")).ToArray();
 
             container.RegisterType(typeof(Startup));
 
-             container.RegisterTypes(
-                 UnityHelpers.GetTypesWithCustomAttribute<UnityIoCContainerControlledAttribute>(myAssemblies),
-                 WithMappings.FromMatchingInterface,
-                 WithName.Default,
-                 WithLifetime.ContainerControlled,
-                 null
-                ).RegisterTypes(
-                         UnityHelpers.GetTypesWithCustomAttribute<UnityIoCTransientLifetimeAttribute>(myAssemblies),
-                         WithMappings.FromMatchingInterface,
-                         WithName.Default,
-                         WithLifetime.Transient);
+            // container.RegisterTypes(
+            //     UnityHelpers.GetTypesWithCustomAttribute<ContainerControlledAttribute>(myAssemblies),
+            //     WithMappings.FromMatchingInterface,
+            //     WithName.Default,
+            //     WithLifetime.ContainerControlled,
+            //     null
+            //    ).RegisterTypes(
+            //             UnityHelpers.GetTypesWithCustomAttribute<TransientLifetimeAttribute>(myAssemblies),
+            //             WithMappings.FromMatchingInterface,
+            //             WithName.Default,
+            //             WithLifetime.Transient);
 
         }
 

@@ -3,8 +3,11 @@ using System.Web.Http;
 using System.Collections.Generic;
 using Microsoft.Owin.Hosting;
 using System;
+using System.Linq;
 using System.Net.Http;
 using Microsoft.Practices.Unity;
+using System.Web.Http.Filters;
+
 
 namespace Unity.SelfHostWebApiOwin
 {
