@@ -1,5 +1,6 @@
 using Owin;
 using System.Web.Http;
+using System.Collections.Generic;
 using Microsoft.Owin.Hosting;
 using System;
 using System.Net.Http;
@@ -37,7 +38,16 @@ namespace Unity.SelfHostWebApiOwin
         {
             // Configure Web API for self-host. 
             HttpConfiguration config = new HttpConfiguration();
+
+			// Add Unity DependencyResolver
             config.DependencyResolver = new UnityDependencyResolver(SelfHostWebApiOwin.UnityHelpers.GetConfiguredContainer());
+
+			// Add Unity filters provider
+			//var providers = config.Services.GetFilterProviders().ToList();
+            //config.Services.Add(typeof (IFilterProvider), new UnityFilterAttributeFilterProvider(SelfHostWebApiOwin.UnityHelpers.GetConfiguredContainer(), providers));
+
+            //var defaultprovider = providers.First(i => i is ActionDescriptorFilterProvider);
+            //config.Services.Remove(typeof(IFilterProvider), defaultprovider);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",

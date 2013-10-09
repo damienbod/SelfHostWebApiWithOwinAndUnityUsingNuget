@@ -46,17 +46,17 @@ namespace Unity.SelfHostWebApiOwin
 
             container.RegisterType(typeof(Startup));
 
-            container.RegisterTypes(
-                UnityHelpers.GetTypesWithCustomAttribute<UnityIoCContainerControlledAttribute>(myAssemblies),
-                WithMappings.FromMatchingInterface,
-                WithName.Default,
-                WithLifetime.ContainerControlled,
-                null
-               ).RegisterTypes(
-                        UnityHelpers.GetTypesWithCustomAttribute<UnityIoCTransientLifetimeAttribute>(myAssemblies),
-                        WithMappings.FromMatchingInterface,
-                        WithName.Default,
-                        WithLifetime.Transient);
+             container.RegisterTypes(
+                 UnityHelpers.GetTypesWithCustomAttribute<UnityIoCContainerControlledAttribute>(myAssemblies),
+                 WithMappings.FromMatchingInterface,
+                 WithName.Default,
+                 WithLifetime.ContainerControlled,
+                 null
+                ).RegisterTypes(
+                         UnityHelpers.GetTypesWithCustomAttribute<UnityIoCTransientLifetimeAttribute>(myAssemblies),
+                         WithMappings.FromMatchingInterface,
+                         WithName.Default,
+                         WithLifetime.Transient);
 
         }
 

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
-    <version>1.0.2</version>
+    <version>1.0.4</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com</projectUrl>
@@ -10,5 +10,13 @@
     <description>Unity for self hosted WebApi</description>
     <language>en-US</language>
     <tags>.NET ASP.NET Web Api Enterprise Library Unity Web WebApi</tags>
+	 <dependencies>
+      <dependency id="Unity" version="3.0.1304.1" />
+	  <dependency id="Microsoft.Web.Infrastructure" version="1.0.0.0" />
+      <dependency id="Microsoft.AspNet.WebApi.WebHost" version="4.0.30506.0"  />
+      <dependency id="Microsoft.AspNet.WebPages" version="2.0.20710.0"  />
+      <dependency id="Newtonsoft.Json" version="4.5.11"  />
+	  <dependency id="Owin" version="1.0"  />
+    </dependencies>
   </metadata>
-</package>
+  </package>
