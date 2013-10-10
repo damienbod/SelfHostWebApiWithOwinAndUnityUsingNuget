@@ -2,7 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
-    <version>1.0.6-beta</version>
+    <title>Self Hosted Web Api using Owin and Unity</title>
+    <version>1.0.7-beta</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com</projectUrl>
@@ -23,6 +24,7 @@
 	  <dependency id="Microsoft.AspNet.WebApi.Client" version="5.0.0-rc1" />
 	  <dependency id="Microsoft.Owin" version="2.0.0-rc1" />
 	  <dependency id="Microsoft.Owin.Host.HttpListener" version="2.0.0-rc1" />
-    </dependencies>
+    <dependency id="Microsoft.Owin.Host.SystemWeb" version="2.0.0-rc1" />
+   </dependencies>
   </metadata>
   </package>

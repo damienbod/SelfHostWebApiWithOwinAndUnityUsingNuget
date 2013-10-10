@@ -136,7 +136,7 @@
     </Reference>
     <Reference Include="Unity.SelfHostWebApiOwin, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\Unity.SelfHostWebApiOwin.1.0.4\lib\net45\Unity.SelfHostWebApiOwin.dll</HintPath>
+      <HintPath>..\packages\Unity.SelfHostWebApiOwin.1.0.6-beta\lib\net45\Unity.SelfHostWebApiOwin.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
