@@ -2,18 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/10/nuspec.xsd">
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
-    <version>1.0.6-beta</version>
-    <title>Unity.SelfHostWebApiOwin</title>
+    <version>1.0.9-beta</version>
+    <title>Self Hosted Web Api using Owin and Unity</title>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com/</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Unity for self hosted WebApi</description>
-    <releaseNotes>Code: https://github.com/damienbod/SelfHostWebApiWithOwinAndUnityUsingNuget
-Website: damienbod.wordpress.com 
-TODO
-- Doc HowTo
-- Tests Filter</releaseNotes>
     <language>en-US</language>
     <tags>.NET ASP.NET Web Api Enterprise Library Unity WebApi</tags>
     <dependencies>
@@ -28,6 +23,7 @@ TODO
       <dependency id="Microsoft.AspNet.WebApi.Client" version="5.0.0-rc1" />
       <dependency id="Microsoft.Owin" version="2.0.0-rc1" />
       <dependency id="Microsoft.Owin.Host.HttpListener" version="2.0.0-rc1" />
+      <dependency id="Microsoft.Owin.Host.SystemWeb" version="2.0.0-rc1" />
     </dependencies>
   </metadata>
 </package>
