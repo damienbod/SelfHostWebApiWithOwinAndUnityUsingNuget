@@ -3,12 +3,13 @@
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
     <title>Self Hosted Web Api using Owin and Unity</title>
-    <version>1.0.9-beta</version>
+    <version>1.0.10-beta</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Unity for self hosted WebApi</description>
+	<iconUrl>http://www.gravatar.com/avatar/61d005637f57b5c3da8ba662cf04a9d6.png</iconUrl>
 	<language>en-US</language>
 	<tags>.NET ASP.NET Web Api Enterprise Library Unity Web WebApi</tags>
 	 <dependencies>
