@@ -3,7 +3,7 @@
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
     <title>Self Hosted Web Api using Owin and Unity</title>
-    <version>1.0.7-beta</version>
+    <version>1.0.8-beta</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com</projectUrl>

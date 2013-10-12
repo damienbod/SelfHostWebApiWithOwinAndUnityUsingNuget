@@ -1,13 +1,10 @@
 ﻿using Owin;
 using System.Web.Http;
-using System.Collections.Generic;
 using Microsoft.Owin.Hosting;
 using System;
 using System.Linq;
-using System.Net.Http;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Filters;
-
 
 namespace Unity.SelfHostWebApiOwin
 {
@@ -20,6 +17,7 @@ namespace Unity.SelfHostWebApiOwin
         {
             string baseAddress = "http://localhost:8081/";
             var startup = _container.Resolve<Startup>();
+             //options.ServerFactory = "Microsoft.Owin.Host.HttpListener"
             IDisposable webApplication = WebApp.Start(baseAddress, startup.Configuration);
 
             try
@@ -32,25 +30,20 @@ namespace Unity.SelfHostWebApiOwin
             {
                 webApplication.Dispose();
             }
-
-
         }
+
         // This code configures Web API. The Startup class is specified as a type
         // parameter in the WebApp.Start method.
         public void Configuration(IAppBuilder appBuilder)
         {
             // Configure Web API for self-host. 
-            HttpConfiguration config = new HttpConfiguration();
+            var config = new HttpConfiguration();
 
 			// Add Unity DependencyResolver
-            config.DependencyResolver = new UnityDependencyResolver(SelfHostWebApiOwin.UnityHelpers.GetConfiguredContainer());
+            config.DependencyResolver = new UnityDependencyResolver(UnityHelpers.GetConfiguredContainer());
 
 			// Add Unity filters provider
-			//var providers = config.Services.GetFilterProviders().ToList();
-            //config.Services.Add(typeof (IFilterProvider), new UnityFilterAttributeFilterProvider(SelfHostWebApiOwin.UnityHelpers.GetConfiguredContainer(), providers));
-
-            //var defaultprovider = providers.First(i => i is ActionDescriptorFilterProvider);
-            //config.Services.Remove(typeof(IFilterProvider), defaultprovider);
+            RegisterFilterProviders(config);
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
@@ -60,5 +53,15 @@ namespace Unity.SelfHostWebApiOwin
 
             appBuilder.UseWebApi(config);
         }
+
+        private static void RegisterFilterProviders(HttpConfiguration config)
+        {
+            // Add Unity filters provider
+            var providers = config.Services.GetFilterProviders().ToList();
+            config.Services.Add(typeof(System.Web.Http.Filters.IFilterProvider), new WebApiUnityActionFilterProvider(UnityHelpers.GetConfiguredContainer()));
+            var defaultprovider = providers.First(p => p is ActionDescriptorFilterProvider);
+            config.Services.Remove(typeof(System.Web.Http.Filters.IFilterProvider), defaultprovider);
+        }
+
     }
 }
