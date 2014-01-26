@@ -45,11 +45,14 @@ namespace Unity.SelfHostWebApiOwin
 			// Add Unity filters provider
             RegisterFilterProviders(config);
 
-            config.Routes.MapHttpRoute(
-                name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
-                defaults: new { id = RouteParameter.Optional }
-            );
+            //config.Routes.MapHttpRoute(
+            //    name: "DefaultApi",
+            //    routeTemplate: "api/{controller}/{id}",
+            //    defaults: new { id = RouteParameter.Optional }
+            //);
+
+            // Web API routes
+            config.MapHttpAttributeRoutes();
 
             appBuilder.UseWebApi(config);
         }
