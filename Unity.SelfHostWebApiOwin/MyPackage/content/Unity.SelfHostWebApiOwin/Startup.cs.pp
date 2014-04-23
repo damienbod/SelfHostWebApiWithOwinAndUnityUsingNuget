@@ -1,10 +1,13 @@
-﻿using Owin;
+﻿using Microsoft.Owin;
+using Owin;
 using System.Web.Http;
 using Microsoft.Owin.Hosting;
 using System;
 using System.Linq;
 using Microsoft.Practices.Unity;
 using System.Web.Http.Filters;
+
+[assembly: OwinStartup(typeof(Unity.SelfHostWebApiOwin.Startup))]
 
 namespace Unity.SelfHostWebApiOwin
 {
