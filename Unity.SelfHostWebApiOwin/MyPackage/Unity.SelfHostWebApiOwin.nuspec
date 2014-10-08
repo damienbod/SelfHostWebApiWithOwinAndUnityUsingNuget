@@ -3,7 +3,7 @@
   <metadata>
     <id>Unity.SelfHostWebApiOwin</id>
     <title>Self Hosted Web Api using Owin and Unity</title>
-    <version>1.0.14</version>
+    <version>1.0.15</version>
     <authors>damienbod</authors>
     <owners>damienbod</owners>
     <projectUrl>http://damienbod.wordpress.com/2013/10/12/self-hosted-web-api-using-owin-and-unity-nuget-package-documentation</projectUrl>
@@ -14,15 +14,15 @@
 	<tags>.NET ASP.NET Web Api Enterprise Library Unity Web WebApi</tags>
 	 <dependencies>
       <dependency id="Unity" version="3.5.1404.0" />
-      <dependency id="Newtonsoft.Json" version="6.0.3"  />
+      <dependency id="Newtonsoft.Json" version="6.0.5"  />
 	  <dependency id="Owin" version="1.0"  />
-	  <dependency id="Microsoft.AspNet.WebApi.Owin" version="5.2.0" />
-	  <dependency id="Microsoft.AspNet.WebApi.Core" version="5.2.0" />  
-	  <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.0" />
-	  <dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="5.2.0" />
-	  <dependency id="Microsoft.Owin" version="2.1.0" />
-	  <dependency id="Microsoft.Owin.Host.HttpListener" version="2.1.0" />
-	  <dependency id="Microsoft.Owin.Hosting" version="2.1.0" />
+	  <dependency id="Microsoft.AspNet.WebApi.Owin" version="5.2.2" />
+	  <dependency id="Microsoft.AspNet.WebApi.Core" version="5.2.2" />  
+	  <dependency id="Microsoft.AspNet.WebApi.Client" version="5.2.2" />
+	  <dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="5.2.2" />
+	  <dependency id="Microsoft.Owin" version="3.0.0" />
+	  <dependency id="Microsoft.Owin.Host.HttpListener" version="3.0.0" />
+	  <dependency id="Microsoft.Owin.Hosting" version="3.0.0" />
    </dependencies>
   </metadata>
   </package>
